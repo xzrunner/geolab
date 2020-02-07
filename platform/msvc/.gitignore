@@ -1,0 +1,5 @@
+ghview/
+projects/*
+
+!projects/ghview.vcxproj
+!projects/ghview.vcxproj.filters
