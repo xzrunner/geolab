@@ -1,4 +1,4 @@
-#include "ghview/RegistNodes.h"
+#include "ghv/RegistNodes.h"
 
 #include <ee0/ReflectPropTypes.h>
 

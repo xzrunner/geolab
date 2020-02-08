@@ -1,5 +1,5 @@
-ghview/
+ghv/
 projects/*
 
-!projects/ghview.vcxproj
-!projects/ghview.vcxproj.filters
+!projects/ghv.vcxproj
+!projects/ghv.vcxproj.filters

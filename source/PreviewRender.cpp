@@ -1,5 +1,5 @@
-#include "ghview/PreviewRender.h"
-#include "ghview/Evaluator.h"
+#include "ghv/PreviewRender.h"
+#include "ghv/Evaluator.h"
 
 #include <painting3/RenderSystem.h>
 #include <node0/SceneNode.h>

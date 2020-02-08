@@ -1,3 +1,3 @@
-# ghview
+# ghv
 
 Grasshopper front-end.

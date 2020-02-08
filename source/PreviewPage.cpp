@@ -1,4 +1,4 @@
-#include "ghview/PreviewPage.h"
+#include "ghv/PreviewPage.h"
 
 #include <ee0/WxStagePage.h>
 #include <ee3/WxStageCanvas.h>

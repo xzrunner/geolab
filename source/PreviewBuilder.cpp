@@ -1,4 +1,4 @@
-#include "ghview/PreviewBuilder.h"
+#include "ghv/PreviewBuilder.h"
 
 #include <ee0/SubjectMgr.h>
 #include <ee0/MessageID.h>

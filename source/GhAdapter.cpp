@@ -1,7 +1,7 @@
-#include "ghview/GhAdapter.h"
-#include "ghview/RegistNodes.h"
-#include "ghview/PinType.h"
-#include "ghview/Node.h"
+#include "ghv/GhAdapter.h"
+#include "ghv/RegistNodes.h"
+#include "ghv/PinType.h"
+#include "ghv/Node.h"
 
 #include <blueprint/Node.h>
 #include <blueprint/Pin.h>

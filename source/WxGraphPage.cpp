@@ -1,5 +1,5 @@
-#include "ghview/WxGraphPage.h"
-#include "ghview/Evaluator.h"
+#include "ghv/WxGraphPage.h"
+#include "ghv/Evaluator.h"
 
 #include <ee0/SubjectMgr.h>
 #include <blueprint/MessageID.h>

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ghview/PreviewBuilder.h"
+#include "ghv/PreviewBuilder.h"
 
 #include <ee0/typedef.h>
 #include <blueprint/typedef.h>

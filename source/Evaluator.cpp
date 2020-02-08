@@ -1,6 +1,6 @@
-#include "ghview/Evaluator.h"
-#include "ghview/GhAdapter.h"
-#include "ghview/Node.h"
+#include "ghv/Evaluator.h"
+#include "ghv/GhAdapter.h"
+#include "ghv/Node.h"
 
 #include <blueprint/Pin.h>
 #include <blueprint/Connecting.h>

@@ -11,27 +11,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\ghview\Evaluator.h" />
-    <ClInclude Include="..\..\..\include\ghview\GhAdapter.h" />
-    <ClInclude Include="..\..\..\include\ghview\GhView.h" />
-    <ClInclude Include="..\..\..\include\ghview\Node.h" />
-    <ClInclude Include="..\..\..\include\ghview\node_def_gen.h" />
-    <ClInclude Include="..\..\..\include\ghview\node_regist_cfg.h" />
-    <ClInclude Include="..\..\..\include\ghview\node_rttr_gen.h" />
-    <ClInclude Include="..\..\..\include\ghview\PinCallback.h" />
-    <ClInclude Include="..\..\..\include\ghview\PinType.h" />
-    <ClInclude Include="..\..\..\include\ghview\PreviewBuilder.h" />
-    <ClInclude Include="..\..\..\include\ghview\PreviewPage.h" />
-    <ClInclude Include="..\..\..\include\ghview\PreviewRender.h" />
-    <ClInclude Include="..\..\..\include\ghview\RegistNodes.h" />
-    <ClInclude Include="..\..\..\include\ghview\WxGraphPage.h" />
-    <ClInclude Include="..\..\..\include\ghview\WxPreviewCanvas.h" />
-    <ClInclude Include="..\..\..\include\ghview\WxToolbarPanel.h" />
+    <ClInclude Include="..\..\..\include\ghv\Evaluator.h" />
+    <ClInclude Include="..\..\..\include\ghv\GhAdapter.h" />
+    <ClInclude Include="..\..\..\include\ghv\GHV.h" />
+    <ClInclude Include="..\..\..\include\ghv\Node.h" />
+    <ClInclude Include="..\..\..\include\ghv\node_def_gen.h" />
+    <ClInclude Include="..\..\..\include\ghv\node_regist_cfg.h" />
+    <ClInclude Include="..\..\..\include\ghv\node_rttr_gen.h" />
+    <ClInclude Include="..\..\..\include\ghv\PinCallback.h" />
+    <ClInclude Include="..\..\..\include\ghv\PinType.h" />
+    <ClInclude Include="..\..\..\include\ghv\PreviewBuilder.h" />
+    <ClInclude Include="..\..\..\include\ghv\PreviewPage.h" />
+    <ClInclude Include="..\..\..\include\ghv\PreviewRender.h" />
+    <ClInclude Include="..\..\..\include\ghv\RegistNodes.h" />
+    <ClInclude Include="..\..\..\include\ghv\WxGraphPage.h" />
+    <ClInclude Include="..\..\..\include\ghv\WxPreviewCanvas.h" />
+    <ClInclude Include="..\..\..\include\ghv\WxToolbarPanel.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\Evaluator.cpp" />
     <ClCompile Include="..\..\..\source\GhAdapter.cpp" />
-    <ClCompile Include="..\..\..\source\GhView.cpp" />
+    <ClCompile Include="..\..\..\source\GHV.cpp" />
     <ClCompile Include="..\..\..\source\Node.cpp" />
     <ClCompile Include="..\..\..\source\PinCallback.cpp" />
     <ClCompile Include="..\..\..\source\PreviewBuilder.cpp" />
@@ -44,9 +44,9 @@
     <ClCompile Include="..\..\..\source\WxToolbarPanel.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>7.ghview</ProjectName>
+    <ProjectName>7.ghv</ProjectName>
     <ProjectGuid>{36CE6C84-870C-4F0E-8518-D821EF1E7601}</ProjectGuid>
-    <RootNamespace>ghview</RootNamespace>
+    <RootNamespace>ghv</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -76,12 +76,12 @@
     <_ProjectFileVersion>15.0.26730.12</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\ghview\x86\Debug\</OutDir>
-    <IntDir>..\ghview\x86\Debug\obj\</IntDir>
+    <OutDir>..\ghv\x86\Debug\</OutDir>
+    <IntDir>..\ghv\x86\Debug\obj\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\ghview\x86\Release\</OutDir>
-    <IntDir>..\ghview\x86\Release\obj\</IntDir>
+    <OutDir>..\ghv\x86\Release\</OutDir>
+    <IntDir>..\ghv\x86\Release\obj\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

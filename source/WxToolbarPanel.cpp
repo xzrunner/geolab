@@ -1,4 +1,4 @@
-#include "ghview/WxToolbarPanel.h"
+#include "ghv/WxToolbarPanel.h"
 
 #include <ee0/SubjectMgr.h>
 #include <ee0/GameObj.h>

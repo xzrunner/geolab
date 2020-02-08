@@ -10,7 +10,7 @@
 namespace ghv
 {
 
-class GhView
+class GHV
 {
 public:
     auto& GetAllNodes() { return m_nodes; }
@@ -21,8 +21,8 @@ private:
 private:
     std::vector<bp::NodePtr> m_nodes;
 
-    CU_SINGLETON_DECLARATION(GhView)
+    CU_SINGLETON_DECLARATION(GHV)
 
-}; // GhView
+}; // GHV
 
 }

@@ -1,6 +1,6 @@
-#include "ghview/GhView.h"
-#include "ghview/PinCallback.h"
-#include "ghview/Node.h"
+#include "ghv/GHV.h"
+#include "ghv/PinCallback.h"
+#include "ghv/Node.h"
 
 #include <blueprint/NodeBuilder.h>
 #include <blueprint/node/Commentary.h>
@@ -10,11 +10,11 @@
 namespace ghv
 {
 
-CU_SINGLETON_DEFINITION(GhView);
+CU_SINGLETON_DEFINITION(GHV);
 
 extern void regist_rttr();
 
-GhView::GhView()
+GHV::GHV()
 {
 	gh::GH::Instance();
 
@@ -25,7 +25,7 @@ GhView::GhView()
     InitPinCallback();
 }
 
-void GhView::InitNodes()
+void GHV::InitNodes()
 {
     const int bp_count = 1;
 

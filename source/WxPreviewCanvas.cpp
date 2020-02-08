@@ -1,8 +1,8 @@
-#include "ghview/WxPreviewCanvas.h"
-#include "ghview/PreviewPage.h"
-#include "ghview/Node.h"
-#include "ghview/WxGraphPage.h"
-#include "ghview/PreviewRender.h"
+#include "ghv/WxPreviewCanvas.h"
+#include "ghv/PreviewPage.h"
+#include "ghv/Node.h"
+#include "ghv/WxGraphPage.h"
+#include "ghv/PreviewRender.h"
 
 #include <ee0/WxStagePage.h>
 #include <ee0/SubjectMgr.h>

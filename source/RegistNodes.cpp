@@ -1,4 +1,4 @@
-#include "ghview/RegistNodes.h"
+#include "ghv/RegistNodes.h"
 
 #include <ee0/ReflectPropTypes.h>
 
@@ -16,8 +16,8 @@ rttr::registration::class_<ghv::Node>("ghv::node")
 )
 ;
 
-#define EXE_FILEPATH "ghview/node_rttr_gen.h"
-#include "ghview/node_regist_cfg.h"
+#define EXE_FILEPATH "ghv/node_rttr_gen.h"
+#include "ghv/node_regist_cfg.h"
 #undef EXE_FILEPATH
 
 }

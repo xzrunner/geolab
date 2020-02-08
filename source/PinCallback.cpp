@@ -1,5 +1,5 @@
-#include "ghview/PinCallback.h"
-#include "ghview/PinType.h"
+#include "ghv/PinCallback.h"
+#include "ghv/PinType.h"
 
 #include <painting0/Color.h>
 #include <blueprint/Pin.h>

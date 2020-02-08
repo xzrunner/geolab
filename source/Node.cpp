@@ -1,5 +1,5 @@
-#include "ghview/Node.h"
-#include "ghview/GhAdapter.h"
+#include "ghv/Node.h"
+#include "ghv/GhAdapter.h"
 
 #include <blueprint/Pin.h>
 #include <blueprint/Connecting.h>

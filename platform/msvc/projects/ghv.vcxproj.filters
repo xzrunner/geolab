@@ -36,52 +36,52 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\ghview\PinType.h">
+    <ClInclude Include="..\..\..\include\ghv\PinType.h">
       <Filter>dataset\pin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\PinCallback.h">
+    <ClInclude Include="..\..\..\include\ghv\PinCallback.h">
       <Filter>dataset\pin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\Node.h">
+    <ClInclude Include="..\..\..\include\ghv\Node.h">
       <Filter>dataset\node</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\GhAdapter.h">
+    <ClInclude Include="..\..\..\include\ghv\GhAdapter.h">
       <Filter>tools\trans</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\node_def_gen.h">
+    <ClInclude Include="..\..\..\include\ghv\node_def_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\node_regist_cfg.h">
+    <ClInclude Include="..\..\..\include\ghv\node_regist_cfg.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\node_rttr_gen.h">
+    <ClInclude Include="..\..\..\include\ghv\node_rttr_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\RegistNodes.h">
+    <ClInclude Include="..\..\..\include\ghv\RegistNodes.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\GhView.h" />
-    <ClInclude Include="..\..\..\include\ghview\WxGraphPage.h">
+    <ClInclude Include="..\..\..\include\ghv\WxGraphPage.h">
       <Filter>view\editor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\WxToolbarPanel.h">
+    <ClInclude Include="..\..\..\include\ghv\WxToolbarPanel.h">
       <Filter>view\toolbar</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\PreviewPage.h">
+    <ClInclude Include="..\..\..\include\ghv\PreviewPage.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\WxPreviewCanvas.h">
+    <ClInclude Include="..\..\..\include\ghv\WxPreviewCanvas.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\Evaluator.h">
+    <ClInclude Include="..\..\..\include\ghv\Evaluator.h">
       <Filter>tools\eval</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\PreviewRender.h">
+    <ClInclude Include="..\..\..\include\ghv\PreviewRender.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghview\PreviewBuilder.h">
+    <ClInclude Include="..\..\..\include\ghv\PreviewBuilder.h">
       <Filter>tools\eval</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\ghv\GHV.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\PinCallback.cpp">
@@ -99,7 +99,6 @@
     <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
       <Filter>tools\rtti</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\GhView.cpp" />
     <ClCompile Include="..\..\..\source\WxGraphPage.cpp">
       <Filter>view\editor</Filter>
     </ClCompile>
@@ -121,5 +120,6 @@
     <ClCompile Include="..\..\..\source\PreviewBuilder.cpp">
       <Filter>tools\eval</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\GHV.cpp" />
   </ItemGroup>
 </Project>
