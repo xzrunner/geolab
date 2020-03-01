@@ -2,7 +2,8 @@
 
 #include <ee0/typedef.h>
 
-namespace gh { class Evaluator; }
+#include <dag/Graph.h>
+#include <gh/ParamType.h>
 
 namespace ghv
 {
@@ -11,14 +12,14 @@ class PreviewBuilder
 {
 public:
     PreviewBuilder(const ee0::SubjectMgrPtr& sub_mgr,
-        const gh::Evaluator& eval);
+        const dag::Graph<gh::ParamType>& eval);
 
     void Build();
 
 private:
     ee0::SubjectMgrPtr m_sub_mgr;
 
-    const gh::Evaluator& m_eval;
+    const dag::Graph<gh::ParamType>& m_eval;
 
 }; // PreviewBuilder
 

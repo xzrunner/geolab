@@ -4,7 +4,6 @@
 #include <ee0/MessageID.h>
 #include <ee0/MsgHelper.h>
 
-#include <gh/Evaluator.h>
 #include <gh/ParamImpl.h>
 #include <gh/component/Line.h>
 #include <ns/NodeFactory.h>
@@ -15,7 +14,8 @@
 namespace ghv
 {
 
-PreviewBuilder::PreviewBuilder(const ee0::SubjectMgrPtr& sub_mgr, const gh::Evaluator& eval)
+PreviewBuilder::PreviewBuilder(const ee0::SubjectMgrPtr& sub_mgr,
+                               const dag::Graph<gh::ParamType>& eval)
     : m_sub_mgr(sub_mgr)
     , m_eval(eval)
 {
@@ -24,7 +24,7 @@ PreviewBuilder::PreviewBuilder(const ee0::SubjectMgrPtr& sub_mgr, const gh::Eval
 void PreviewBuilder::Build()
 {
     m_sub_mgr->NotifyObservers(ee0::MSG_SCENE_NODE_CLEAR);
-    auto& comps = m_eval.GetAllComps();
+    auto& comps = m_eval.GetAllNodes();
     for (auto& pair : comps)
     {
         auto& comp = pair.second;
@@ -32,7 +32,7 @@ void PreviewBuilder::Build()
         auto type = comp->get_type();
         if (type == rttr::type::get<gh::comp::Line>())
         {
-            auto param = comp->GetValue(static_cast<size_t>(gh::comp::Line::OutputID::L));
+            auto param = std::static_pointer_cast<gh::Component>(comp)->GetValue(static_cast<size_t>(gh::comp::Line::OutputID::L));
             assert(param && param->Type() == gh::ParamType::Line);
             auto line_param = std::static_pointer_cast<gh::LineParam>(param);
             auto& lines = line_param->GetLines();

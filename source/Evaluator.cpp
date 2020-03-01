@@ -20,7 +20,7 @@ void Evaluator::OnAddNode(const bp::Node& front, const n0::SceneNodePtr& snode, 
         return;
     }
 
-    m_eval.AddComponent(back);
+    m_eval.AddNode(back);
 
     m_front2back.insert({ &front, back });
 
@@ -41,7 +41,7 @@ void Evaluator::OnRemoveNode(const bp::Node& node)
         return;
     }
 
-    m_eval.RemoveComponent(itr->second);
+    m_eval.RemoveNode(itr->second);
     m_front2back.erase(itr);
 
     Update();
@@ -49,7 +49,7 @@ void Evaluator::OnRemoveNode(const bp::Node& node)
 
 void Evaluator::OnClearAllNodes()
 {
-    m_eval.ClearAllComponents();
+    m_eval.ClearAllNodes();
     m_front2back.clear();
 
     Update();

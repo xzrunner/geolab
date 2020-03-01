@@ -5,7 +5,8 @@
 #include <ee0/typedef.h>
 #include <blueprint/typedef.h>
 
-#include <gh/Evaluator.h>
+#include <dag/Graph.h>
+#include <gh/ParamType.h>
 #include <gh/typedef.h>
 #include <node0/typedef.h>
 
@@ -46,7 +47,7 @@ private:
     void Update();
 
 private:
-    gh::Evaluator m_eval;
+    dag::Graph<gh::ParamType> m_eval;
 
     PreviewBuilder m_preview_builder;
 
