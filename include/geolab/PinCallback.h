@@ -1,6 +1,6 @@
 #pragma once
 
-namespace ghv
+namespace geolab
 {
 
 void InitPinCallback();

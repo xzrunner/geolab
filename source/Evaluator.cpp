@@ -1,11 +1,11 @@
-#include "ghv/Evaluator.h"
-#include "ghv/GhAdapter.h"
-#include "ghv/Node.h"
+#include "geolab/Evaluator.h"
+#include "geolab/GeoGraphAdapter.h"
+#include "geolab/Node.h"
 
 #include <blueprint/Pin.h>
 #include <blueprint/Connecting.h>
 
-namespace ghv
+namespace geolab
 {
 
 Evaluator::Evaluator(const ee0::SubjectMgrPtr& sub_mgr)
@@ -15,7 +15,7 @@ Evaluator::Evaluator(const ee0::SubjectMgrPtr& sub_mgr)
 
 void Evaluator::OnAddNode(const bp::Node& front, const n0::SceneNodePtr& snode, bool need_update)
 {
-    auto back = GhAdapter::CreateBackFromFront(front);
+    auto back = GeoGraphAdapter::CreateBackFromFront(front);
     if (!back) {
         return;
     }
@@ -28,7 +28,7 @@ void Evaluator::OnAddNode(const bp::Node& front, const n0::SceneNodePtr& snode, 
         const_cast<Node&>(static_cast<const Node&>(front)).SetName(back->GetName());
     }
 
-    GhAdapter::UpdatePropBackFromFront(front, *back, *this);
+    GeoGraphAdapter::UpdatePropBackFromFront(front, *back, *this);
     if (need_update) {
         Update();
     }
@@ -63,7 +63,7 @@ void Evaluator::OnNodePropChanged(const bp::NodePtr& node)
         return;
     }
 
-    GhAdapter::UpdatePropBackFromFront(*node, *itr->second, *this);
+    GeoGraphAdapter::UpdatePropBackFromFront(*node, *itr->second, *this);
 
     if (node->get_type().is_derived_from<Node>())
     {
@@ -125,7 +125,7 @@ void Evaluator::OnDisconnecting(const bp::Connecting& conn)
 
 void Evaluator::OnRebuildConnection()
 {
-    std::vector<std::pair<gh::Component::PortAddr, gh::Component::PortAddr>> conns;
+    std::vector<std::pair<geograph::Component::PortAddr, geograph::Component::PortAddr>> conns;
     for (auto& itr : m_front2back)
     {
         auto& front = itr.first;
@@ -160,7 +160,7 @@ void Evaluator::OnRebuildConnection()
     Update();
 }
 
-gh::CompPtr Evaluator::QueryBackNode(const bp::Node& front_node) const
+geograph::CompPtr Evaluator::QueryBackNode(const bp::Node& front_node) const
 {
     auto itr = m_front2back.find(&front_node);
     return itr == m_front2back.end() ? nullptr : itr->second;

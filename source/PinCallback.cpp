@@ -1,5 +1,5 @@
-#include "ghv/PinCallback.h"
-#include "ghv/PinType.h"
+#include "geolab/PinCallback.h"
+#include "geolab/PinType.h"
 
 #include <painting0/Color.h>
 #include <blueprint/Pin.h>
@@ -33,30 +33,30 @@ std::string get_desc_func(const std::string& name, int type)
     switch (type)
     {
         // geometry
-    case ghv::PIN_POINT:
+    case geolab::PIN_POINT:
         ret += "(P)";
         break;
-    case ghv::PIN_VECTOR:
+    case geolab::PIN_VECTOR:
         ret += "(V)";
         break;
-    case ghv::PIN_CIRCLE:
+    case geolab::PIN_CIRCLE:
         ret += "(C)";
         break;
-    case ghv::PIN_LINE:
+    case geolab::PIN_LINE:
         ret += "(L)";
         break;
-    case ghv::PIN_PLANE:
+    case geolab::PIN_PLANE:
         ret += "(P)";
         break;
 
         // primitive
-    case ghv::PIN_BOOLEAN:
+    case geolab::PIN_BOOLEAN:
         ret += "(b)";
         break;
-    case ghv::PIN_INTEGER:
+    case geolab::PIN_INTEGER:
         ret += "(i)";
         break;
-    case ghv::PIN_NUMBER:
+    case geolab::PIN_NUMBER:
         ret += "(f)";
         break;
 
@@ -71,23 +71,23 @@ const pt0::Color& get_color_func(int type)
     switch (type)
     {
         // geometry
-    case ghv::PIN_POINT:
+    case geolab::PIN_POINT:
         return COL_POINT;
-    case ghv::PIN_VECTOR:
+    case geolab::PIN_VECTOR:
         return COL_VECTOR;
-    case ghv::PIN_CIRCLE:
+    case geolab::PIN_CIRCLE:
         return COL_CIRCLE;
-    case ghv::PIN_LINE:
+    case geolab::PIN_LINE:
         return COL_LINE;
-    case ghv::PIN_PLANE:
+    case geolab::PIN_PLANE:
         return COL_PLANE;
 
         // primitive
-    case ghv::PIN_BOOLEAN:
+    case geolab::PIN_BOOLEAN:
         return COL_BOOLEAN;
-    case ghv::PIN_INTEGER:
+    case geolab::PIN_INTEGER:
         return COL_INTEGER;
-    case ghv::PIN_NUMBER:
+    case geolab::PIN_NUMBER:
         return COL_NUMBER;
 
     default:
@@ -110,7 +110,7 @@ bool can_type_cast_func(int type_from, int type_to)
 
 }
 
-namespace ghv
+namespace geolab
 {
 
 void InitPinCallback()

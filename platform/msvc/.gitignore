@@ -1,5 +1,5 @@
-ghv/
+geolab/
 projects/*
 
-!projects/ghv.vcxproj
-!projects/ghv.vcxproj.filters
+!projects/geolab.vcxproj
+!projects/geolab.vcxproj.filters

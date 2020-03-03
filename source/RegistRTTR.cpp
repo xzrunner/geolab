@@ -1,4 +1,4 @@
-#include "ghv/RegistNodes.h"
+#include "geolab/RegistNodes.h"
 
 #include <ee0/ReflectPropTypes.h>
 
@@ -8,7 +8,7 @@ extern void regist_sm_rttr();
 extern void regist_pt0_rttr();
 }
 
-namespace ghv
+namespace geolab
 {
 
 void regist_rttr()

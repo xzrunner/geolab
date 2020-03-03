@@ -1,5 +1,5 @@
-#include "ghv/WxGraphPage.h"
-#include "ghv/Evaluator.h"
+#include "geolab/WxGraphPage.h"
+#include "geolab/Evaluator.h"
 
 #include <ee0/SubjectMgr.h>
 #include <blueprint/MessageID.h>
@@ -28,7 +28,7 @@ const uint32_t MESSAGES[] =
 
 }
 
-namespace ghv
+namespace geolab
 {
 
 WxGraphPage::WxGraphPage(wxWindow* parent, const ee0::GameObj& root,

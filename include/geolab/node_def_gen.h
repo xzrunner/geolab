@@ -10,7 +10,7 @@
 #endif
 
 #ifndef PARM_FILEPATH
-#define PARM_FILEPATH gh/component/##PARM_NODE_CLASS##.parm.h
+#define PARM_FILEPATH geograph/component/##PARM_NODE_CLASS##.parm.h
 #endif
 
 #define Bool   bool

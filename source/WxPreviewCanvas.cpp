@@ -1,8 +1,8 @@
-#include "ghv/WxPreviewCanvas.h"
-#include "ghv/PreviewPage.h"
-#include "ghv/Node.h"
-#include "ghv/WxGraphPage.h"
-#include "ghv/PreviewRender.h"
+#include "geolab/WxPreviewCanvas.h"
+#include "geolab/PreviewPage.h"
+#include "geolab/Node.h"
+#include "geolab/WxGraphPage.h"
+#include "geolab/PreviewRender.h"
 
 #include <ee0/WxStagePage.h>
 #include <ee0/SubjectMgr.h>
@@ -25,7 +25,7 @@ const uint32_t LIGHT_SELECT_COLOR = 0x88000088;
 
 }
 
-namespace ghv
+namespace geolab
 {
 
 WxPreviewCanvas::WxPreviewCanvas(ee0::WxStagePage* stage, ECS_WORLD_PARAM

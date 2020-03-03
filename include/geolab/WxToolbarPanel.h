@@ -7,7 +7,7 @@
 
 namespace bp { class WxNodeProperty; }
 
-namespace ghv
+namespace geolab
 {
 
 class WxToolbarPanel : public wxPanel, public ee0::Observer

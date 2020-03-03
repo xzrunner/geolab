@@ -1,10 +1,10 @@
-#include "ghv/Node.h"
-#include "ghv/GhAdapter.h"
+#include "geolab/Node.h"
+#include "geolab/GeoGraphAdapter.h"
 
 #include <blueprint/Pin.h>
 #include <blueprint/Connecting.h>
 
-namespace ghv
+namespace geolab
 {
 
 const char* Node::STR_PROP_DISPLAY = "Display";
@@ -43,7 +43,7 @@ void Node::Draw(const n2::RenderParams& rp) const
     //}
 }
 
-void Node::UpdatePins(const gh::Component& comp)
+void Node::UpdatePins(const geograph::Component& comp)
 {
     std::vector<PinDesc> input, output;
     PortBack2Front(input, comp.GetImports());
@@ -62,7 +62,7 @@ void Node::InitPins(const std::vector<PinDesc>& input,
 
 void Node::InitPins(const std::string& name)
 {
-	rttr::type t = rttr::type::get_by_name("gh::" + name);
+	rttr::type t = rttr::type::get_by_name("geograph::" + name);
     if (!t.is_valid()) {
         return;
     }
@@ -74,15 +74,15 @@ void Node::InitPins(const std::string& name)
 	assert(method_imports.is_valid());
 	auto var_imports = method_imports.invoke(var);
 	assert(var_imports.is_valid()
-		&& var_imports.is_type<std::vector<gh::Component::Port>>());
-	auto& imports = var_imports.get_value<std::vector<gh::Component::Port>>();
+		&& var_imports.is_type<std::vector<geograph::Component::Port>>());
+	auto& imports = var_imports.get_value<std::vector<geograph::Component::Port>>();
 
 	auto method_exports = t.get_method("GetExports");
 	assert(method_exports.is_valid());
 	auto var_exports = method_exports.invoke(var);
 	assert(var_exports.is_valid()
-		&& var_exports.is_type<std::vector<gh::Component::Port>>());
-	auto& exports = var_exports.get_value<std::vector<gh::Component::Port>>();
+		&& var_exports.is_type<std::vector<geograph::Component::Port>>());
+	auto& exports = var_exports.get_value<std::vector<geograph::Component::Port>>();
 
 	std::vector<PinDesc> input, output;
     PortBack2Front(input, imports);
@@ -120,7 +120,7 @@ void Node::InitPinsImpl(const std::vector<PinDesc>& pins, bool is_input)
 }
 
 void Node::PortBack2Front(std::vector<PinDesc>& dst,
-                          const std::vector<gh::Component::Port>& src)
+                          const std::vector<geograph::Component::Port>& src)
 {
 	dst.reserve(dst.size() + src.size());
 	for (int i = 0, n = src.size(); i < n; ++i)
@@ -128,7 +128,7 @@ void Node::PortBack2Front(std::vector<PinDesc>& dst,
         PinDesc d;
 
 		auto& s = src[i];
-        d.type = GhAdapter::TypeBackToFront(s.var.type);
+        d.type = GeoGraphAdapter::TypeBackToFront(s.var.type);
         d.name = s.var.full_name;
 
         dst.push_back(d);

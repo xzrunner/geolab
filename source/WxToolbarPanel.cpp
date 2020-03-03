@@ -1,4 +1,4 @@
-#include "ghv/WxToolbarPanel.h"
+#include "geolab/WxToolbarPanel.h"
 
 #include <ee0/SubjectMgr.h>
 #include <ee0/GameObj.h>
@@ -9,7 +9,7 @@
 
 #include <wx/sizer.h>
 
-namespace ghv
+namespace geolab
 {
 
 WxToolbarPanel::WxToolbarPanel(wxWindow* parent, const ee0::SubjectMgrPtr& graph_sub_mgr)

@@ -1,11 +1,11 @@
-#include "ghv/PreviewRender.h"
-#include "ghv/Evaluator.h"
+#include "geolab/PreviewRender.h"
+#include "geolab/Evaluator.h"
 
 #include <painting3/RenderSystem.h>
 #include <node0/SceneNode.h>
 #include <node3/RenderSystem.h>
 
-namespace ghv
+namespace geolab
 {
 
 PreviewRender::PreviewRender(const pt3::Viewport& vp,

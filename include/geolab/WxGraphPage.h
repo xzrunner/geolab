@@ -4,7 +4,7 @@
 
 namespace n0 { class CompComplex; }
 
-namespace ghv
+namespace geolab
 {
 
 class Evaluator;

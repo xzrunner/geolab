@@ -1,13 +1,13 @@
 #pragma once
 
-#include "ghv/PreviewBuilder.h"
+#include "geolab/PreviewBuilder.h"
 
 #include <ee0/typedef.h>
 #include <blueprint/typedef.h>
 
 #include <dag/Graph.h>
-#include <gh/ParamType.h>
-#include <gh/typedef.h>
+#include <geograph/ParamType.h>
+#include <geograph/typedef.h>
 #include <node0/typedef.h>
 
 #include <boost/noncopyable.hpp>
@@ -17,7 +17,7 @@
 
 namespace bp { class Connecting; }
 
-namespace ghv
+namespace geolab
 {
 
 class Evaluator : boost::noncopyable
@@ -41,17 +41,17 @@ public:
 
     auto& GetEval() const { return m_eval; }
 
-    gh::CompPtr QueryBackNode(const bp::Node& front_node) const;
+    geograph::CompPtr QueryBackNode(const bp::Node& front_node) const;
 
 private:
     void Update();
 
 private:
-    dag::Graph<gh::ParamType> m_eval;
+    dag::Graph<geograph::ParamType> m_eval;
 
     PreviewBuilder m_preview_builder;
 
-    std::unordered_map<const bp::Node*, gh::CompPtr> m_front2back;
+    std::unordered_map<const bp::Node*, geograph::CompPtr> m_front2back;
 
 }; // Evaluator
 

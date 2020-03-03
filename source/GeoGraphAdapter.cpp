@@ -1,23 +1,23 @@
-#include "ghv/GhAdapter.h"
-#include "ghv/RegistNodes.h"
-#include "ghv/PinType.h"
-#include "ghv/Node.h"
+#include "geolab/GeoGraphAdapter.h"
+#include "geolab/RegistNodes.h"
+#include "geolab/PinType.h"
+#include "geolab/Node.h"
 
 #include <blueprint/Node.h>
 #include <blueprint/Pin.h>
 
-#include <gh/Component.h>
+#include <geograph/Component.h>
 
-namespace ghv
+namespace geolab
 {
 
-void GhAdapter::UpdatePropBackFromFront(const bp::Node& front, gh::Component& back,
+void GeoGraphAdapter::UpdatePropBackFromFront(const bp::Node& front, geograph::Component& back,
                                         const Evaluator& eval)
 {
     auto f_type = front.get_type();
     auto b_type = back.get_type();
     if (f_type.is_derived_from<Node>() &&
-        b_type.is_derived_from<gh::Component>())
+        b_type.is_derived_from<geograph::Component>())
     {
         for (auto& dst_prop : b_type.get_properties())
         {
@@ -28,18 +28,18 @@ void GhAdapter::UpdatePropBackFromFront(const bp::Node& front, gh::Component& ba
     }
 }
 
-gh::CompPtr GhAdapter::CreateBackFromFront(const bp::Node& node)
+geograph::CompPtr GeoGraphAdapter::CreateBackFromFront(const bp::Node& node)
 {
     auto type = node.get_type();
     auto src_type = type.get_name().to_string();
     std::string dst_type;
-    std::string lib_str = "gh";
-    auto find_lib = src_type.find("ghv::");
+    std::string lib_str = "geograph";
+    auto find_lib = src_type.find("geolab::");
     if (find_lib != std::string::npos) {
-        dst_type = lib_str + "::" + src_type.substr(find_lib + strlen("ghv::"));
+        dst_type = lib_str + "::" + src_type.substr(find_lib + strlen("geolab::"));
     }
 
-    gh::CompPtr dst = nullptr;
+    geograph::CompPtr dst = nullptr;
 
     if (!dst_type.empty())
     {
@@ -54,7 +54,7 @@ gh::CompPtr GhAdapter::CreateBackFromFront(const bp::Node& node)
             rttr::variant var = t.create();
             assert(var.is_valid());
 
-            dst = var.get_value<std::shared_ptr<gh::Component>>();
+            dst = var.get_value<std::shared_ptr<geograph::Component>>();
             assert(dst);
         }
     }
@@ -67,37 +67,37 @@ gh::CompPtr GhAdapter::CreateBackFromFront(const bp::Node& node)
 }
 
 
-int GhAdapter::TypeBackToFront(gh::ParamType type)
+int GeoGraphAdapter::TypeBackToFront(geograph::ParamType type)
 {
     int ret = -1;
 
     switch (type)
     {
         // geometry
-    case gh::ParamType::Point:
+    case geograph::ParamType::Point:
         ret = PIN_POINT;
         break;
-    case gh::ParamType::Vector:
+    case geograph::ParamType::Vector:
         ret = PIN_VECTOR;
         break;
-    case gh::ParamType::Circle:
+    case geograph::ParamType::Circle:
         ret = PIN_CIRCLE;
         break;
-    case gh::ParamType::Line:
+    case geograph::ParamType::Line:
         ret = PIN_LINE;
         break;
-    case gh::ParamType::Plane:
+    case geograph::ParamType::Plane:
         ret = PIN_PLANE;
         break;
 
         // primitive
-    case gh::ParamType::Boolean:
+    case geograph::ParamType::Boolean:
         ret = PIN_BOOLEAN;
         break;
-    case gh::ParamType::Integer:
+    case geograph::ParamType::Integer:
         ret = PIN_INTEGER;
         break;
-    case gh::ParamType::Number:
+    case geograph::ParamType::Number:
         ret = PIN_NUMBER;
         break;
 

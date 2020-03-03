@@ -1,4 +1,4 @@
-#include "ghv/RegistNodes.h"
+#include "geolab/RegistNodes.h"
 
 #include <ee0/ReflectPropTypes.h>
 
@@ -9,20 +9,20 @@ RTTR_REGISTRATION
 
 // base
 
-rttr::registration::class_<ghv::Node>("ghv::node")
-.property("name", &ghv::Node::GetName, &ghv::Node::SetName)
+rttr::registration::class_<geolab::Node>("geolab::node")
+.property("name", &geolab::Node::GetName, &geolab::Node::SetName)
 (
 	rttr::metadata(ee0::UIMetaInfoTag(), ee0::UIMetaInfo("Name"))
 )
 ;
 
-#define EXE_FILEPATH "ghv/node_rttr_gen.h"
-#include "ghv/node_regist_cfg.h"
+#define EXE_FILEPATH "geolab/node_rttr_gen.h"
+#include "geolab/node_regist_cfg.h"
 #undef EXE_FILEPATH
 
 }
 
-namespace ghv
+namespace geolab
 {
 
 void nodes_regist_rttr()

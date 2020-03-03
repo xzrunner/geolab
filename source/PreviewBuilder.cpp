@@ -1,21 +1,21 @@
-#include "ghv/PreviewBuilder.h"
+#include "geolab/PreviewBuilder.h"
 
 #include <ee0/SubjectMgr.h>
 #include <ee0/MessageID.h>
 #include <ee0/MsgHelper.h>
 
-#include <gh/ParamImpl.h>
-#include <gh/component/Line.h>
+#include <geograph/ParamImpl.h>
+#include <geograph/component/Line.h>
 #include <ns/NodeFactory.h>
 #include <node0/SceneNode.h>
 #include <node3/CompShape.h>
 #include <geoshape/Line3D.h>
 
-namespace ghv
+namespace geolab
 {
 
 PreviewBuilder::PreviewBuilder(const ee0::SubjectMgrPtr& sub_mgr,
-                               const dag::Graph<gh::ParamType>& eval)
+                               const dag::Graph<geograph::ParamType>& eval)
     : m_sub_mgr(sub_mgr)
     , m_eval(eval)
 {
@@ -30,11 +30,11 @@ void PreviewBuilder::Build()
         auto& comp = pair.second;
 
         auto type = comp->get_type();
-        if (type == rttr::type::get<gh::comp::Line>())
+        if (type == rttr::type::get<geograph::comp::Line>())
         {
-            auto param = std::static_pointer_cast<gh::Component>(comp)->GetValue(static_cast<size_t>(gh::comp::Line::OutputID::L));
-            assert(param && param->Type() == gh::ParamType::Line);
-            auto line_param = std::static_pointer_cast<gh::LineParam>(param);
+            auto param = std::static_pointer_cast<geograph::Component>(comp)->GetValue(static_cast<size_t>(geograph::comp::Line::OutputID::L));
+            assert(param && param->Type() == geograph::ParamType::Line);
+            auto line_param = std::static_pointer_cast<geograph::LineParam>(param);
             auto& lines = line_param->GetLines();
 
             std::vector<std::shared_ptr<gs::Shape3D>> shapes;

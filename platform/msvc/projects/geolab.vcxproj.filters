@@ -36,52 +36,52 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\ghv\PinType.h">
+    <ClInclude Include="..\..\..\include\geolab\PinType.h">
       <Filter>dataset\pin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\PinCallback.h">
+    <ClInclude Include="..\..\..\include\geolab\PinCallback.h">
       <Filter>dataset\pin</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\Node.h">
+    <ClInclude Include="..\..\..\include\geolab\Node.h">
       <Filter>dataset\node</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\GhAdapter.h">
-      <Filter>tools\trans</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\node_def_gen.h">
+    <ClInclude Include="..\..\..\include\geolab\node_def_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\node_regist_cfg.h">
+    <ClInclude Include="..\..\..\include\geolab\node_regist_cfg.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\node_rttr_gen.h">
+    <ClInclude Include="..\..\..\include\geolab\node_rttr_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\RegistNodes.h">
+    <ClInclude Include="..\..\..\include\geolab\RegistNodes.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\WxGraphPage.h">
+    <ClInclude Include="..\..\..\include\geolab\WxGraphPage.h">
       <Filter>view\editor</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\WxToolbarPanel.h">
+    <ClInclude Include="..\..\..\include\geolab\WxToolbarPanel.h">
       <Filter>view\toolbar</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\PreviewPage.h">
+    <ClInclude Include="..\..\..\include\geolab\PreviewPage.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\WxPreviewCanvas.h">
+    <ClInclude Include="..\..\..\include\geolab\WxPreviewCanvas.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\Evaluator.h">
+    <ClInclude Include="..\..\..\include\geolab\Evaluator.h">
       <Filter>tools\eval</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\PreviewRender.h">
+    <ClInclude Include="..\..\..\include\geolab\PreviewRender.h">
       <Filter>view\preview</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\PreviewBuilder.h">
+    <ClInclude Include="..\..\..\include\geolab\PreviewBuilder.h">
       <Filter>tools\eval</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\include\ghv\GHV.h" />
+    <ClInclude Include="..\..\..\include\geolab\GeoLab.h" />
+    <ClInclude Include="..\..\..\include\geolab\GeoGraphAdapter.h">
+      <Filter>tools\trans</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\PinCallback.cpp">
@@ -89,9 +89,6 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\Node.cpp">
       <Filter>dataset\node</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\GhAdapter.cpp">
-      <Filter>tools\trans</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\RegistNodes.cpp">
       <Filter>tools\rtti</Filter>
@@ -120,6 +117,9 @@
     <ClCompile Include="..\..\..\source\PreviewBuilder.cpp">
       <Filter>tools\eval</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\GHV.cpp" />
+    <ClCompile Include="..\..\..\source\GeoLab.cpp" />
+    <ClCompile Include="..\..\..\source\GeoGraphAdapter.cpp">
+      <Filter>tools\trans</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -3,23 +3,23 @@
 #include <ee0/typedef.h>
 
 #include <dag/Graph.h>
-#include <gh/ParamType.h>
+#include <geograph/ParamType.h>
 
-namespace ghv
+namespace geolab
 {
 
 class PreviewBuilder
 {
 public:
     PreviewBuilder(const ee0::SubjectMgrPtr& sub_mgr,
-        const dag::Graph<gh::ParamType>& eval);
+        const dag::Graph<geograph::ParamType>& eval);
 
     void Build();
 
 private:
     ee0::SubjectMgrPtr m_sub_mgr;
 
-    const dag::Graph<gh::ParamType>& m_eval;
+    const dag::Graph<geograph::ParamType>& m_eval;
 
 }; // PreviewBuilder
 

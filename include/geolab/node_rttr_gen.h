@@ -10,16 +10,16 @@
 #endif
 
 #ifndef PARM_FILEPATH
-#define PARM_FILEPATH gh/component/##PARM_NODE_CLASS##.parm.h
+#define PARM_FILEPATH geograph/component/##PARM_NODE_CLASS##.parm.h
 #endif
 
-#define RTTR_NAME ghv::##PARM_NODE_NAME
+#define RTTR_NAME geolab::##PARM_NODE_NAME
 
-rttr::registration::class_<ghv::node::PARM_NODE_CLASS>(XSTR(RTTR_NAME))
+rttr::registration::class_<geolab::node::PARM_NODE_CLASS>(XSTR(RTTR_NAME))
 .constructor<>()
 
 #define PARAM_INFO(id, type, name, member, default_val)        \
-.property(#name, &ghv::node::##PARM_NODE_CLASS::member)      \
+.property(#name, &geolab::node::##PARM_NODE_CLASS::member)      \
 (                                                              \
 	rttr::metadata(ee0::UIMetaInfoTag(), ee0::UIMetaInfo(#id)) \
 )

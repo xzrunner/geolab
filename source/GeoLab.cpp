@@ -1,22 +1,22 @@
-#include "ghv/GHV.h"
-#include "ghv/PinCallback.h"
-#include "ghv/Node.h"
+#include "geolab/GeoLab.h"
+#include "geolab/PinCallback.h"
+#include "geolab/Node.h"
 
 #include <blueprint/NodeBuilder.h>
 #include <blueprint/node/Commentary.h>
 
-#include <gh/Gh.h>
+#include <geograph/GeoGraph.h>
 
-namespace ghv
+namespace geolab
 {
 
-CU_SINGLETON_DEFINITION(GHV);
+CU_SINGLETON_DEFINITION(GeoLab);
 
 extern void regist_rttr();
 
-GHV::GHV()
+GeoLab::GeoLab()
 {
-	gh::GH::Instance();
+	geograph::GeoGraph::Instance();
 
 	regist_rttr();
 
@@ -25,7 +25,7 @@ GHV::GHV()
     InitPinCallback();
 }
 
-void GHV::InitNodes()
+void GeoLab::InitNodes()
 {
     const int bp_count = 1;
 

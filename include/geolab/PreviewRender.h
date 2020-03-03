@@ -6,7 +6,7 @@
 namespace n0 { class SceneNode; }
 namespace pt3 { class Viewport; }
 
-namespace ghv
+namespace geolab
 {
 
 class PreviewRender

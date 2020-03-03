@@ -7,10 +7,10 @@
 #include <vector>
 #include <memory>
 
-namespace ghv
+namespace geolab
 {
 
-class GHV
+class GeoLab
 {
 public:
     auto& GetAllNodes() { return m_nodes; }
@@ -21,8 +21,8 @@ private:
 private:
     std::vector<bp::NodePtr> m_nodes;
 
-    CU_SINGLETON_DECLARATION(GHV)
+    CU_SINGLETON_DECLARATION(GeoLab)
 
-}; // GHV
+}; // GeoLab
 
 }

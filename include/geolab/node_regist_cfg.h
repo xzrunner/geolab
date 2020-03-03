@@ -4,7 +4,7 @@
 
 // params
 
-#define PARM_FILEPATH gh/component/param/Point.parm.h
+#define PARM_FILEPATH geograph/component/param/Point.parm.h
 #define PARM_NODE_CLASS ParamPoint
 #define PARM_NODE_NAME param_point
 #include EXE_FILEPATH

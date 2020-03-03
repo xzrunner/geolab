@@ -2,9 +2,9 @@
 
 #include <blueprint/Node.h>
 
-#include <gh/Component.h>
+#include <geograph/Component.h>
 
-namespace ghv
+namespace geolab
 {
 
 class Node : public bp::Node
@@ -20,7 +20,7 @@ public:
     auto& GetName() const { return m_name; }
     void  SetName(const std::string& name) { m_name = name; }
 
-    void UpdatePins(const gh::Component& comp);
+    void UpdatePins(const geograph::Component& comp);
 
 protected:
     struct PinDesc
@@ -46,7 +46,7 @@ private:
         bool is_input);
 
     static void PortBack2Front(std::vector<PinDesc>& dst,
-        const std::vector<gh::Component::Port>& src);
+        const std::vector<geograph::Component::Port>& src);
 
 private:
     std::string m_name;

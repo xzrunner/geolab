@@ -6,7 +6,7 @@
 
 namespace ee0 { class WxStagePage; }
 
-namespace ghv
+namespace geolab
 {
 
 class PreviewPage : public ee0::Observer

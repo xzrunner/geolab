@@ -1,10 +1,10 @@
-#include "ghv/PreviewPage.h"
+#include "geolab/PreviewPage.h"
 
 #include <ee0/WxStagePage.h>
 #include <ee3/WxStageCanvas.h>
 #include <ee3/CameraDriveOP.h>
 
-namespace ghv
+namespace geolab
 {
 
 PreviewPage::PreviewPage(ee0::WxStagePage& stage_page)
